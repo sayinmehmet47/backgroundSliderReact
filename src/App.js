@@ -23,11 +23,21 @@ function App() {
       backgroundImage:
         'https://images.unsplash.com/photo-1559087867-ce4c91325525?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
     },
+    {
+      backgroundImage: `https://cdn.pixabay.com/photo/2017/11/29/17/47/venue-2986721_960_720.jpg`,
+    },
+    {
+      backgroundImage: ` https://cdn.pixabay.com/photo/2020/10/05/19/00/hot-air-balloons-5630493_960_720.jpg`,
+    },
+    {
+      backgroundImage: `    https://cdn.pixabay.com/photo/2018/10/20/14/19/marine-3760886_960_720.jpg
+      `,
+    },
   ];
   const [slide, setSlide] = useState(0);
 
   console.log(arr.length, slide);
-  return slide < arr.length&&slide>-1 ? (
+  return slide < arr.length && slide > -1 ? (
     <section
       style={{
         backgroundImage: `url(${arr[slide].backgroundImage})`,
@@ -56,9 +66,11 @@ function App() {
         </button>
       </div>
     </section>
-  ) :slide<0?(
-    setSlide(arr.length-1)    
-  ):(setSlide(0));
+  ) : slide < 0 ? (
+    setSlide(arr.length - 1)
+  ) : (
+    setSlide(0)
+  );
 }
 
 export default App;
